@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's in a COM | ผู้จัดทำ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/home.png">
+    <style>
+        /* Dark Mode สำหรับ Popup */
+        body.dark-mode .contact-content {
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+
+        body.dark-mode .contact-avatar {
+            border-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo"><a href="index.html">What's in a COM</a></div>
+                <div class="hamburger" id="hamburger">☰</div>
+                <ul class="menu" id="nav-menu">
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="parts.html">ชิ้นส่วนคอมพิวเตอร์</a></li>
+                    <li><a href="news.html">ข่าว/ประชาสัมพันธ์</a></li>
+                    <li><a href="creator.html">ผู้จัดทำ/ติดต่อเรา</a></li>
+                    <li>
+                        <button id="theme-toggle" class="btn-toggle">
+                            <span id="theme-icon">🌙</span>
+                            <span id="theme-text-mobile" class="mobile-label">โหมดกลางคืน</span>
+                            <span id="theme-tooltip" class="custom-tooltip">เข้าสู่โหมดกลางคืน</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-info-section">
+        <div class="container">
+            <div class="project-card">
+                <h2>💻 เกี่ยวกับโครงงาน</h2>
+                <p>
+                    เว็บไซต์ <strong>"What's in a COM"</strong>
+                    จัดทำขึ้นเพื่อเป็นสื่อการเรียนรู้เกี่ยวกับอุปกรณ์คอมพิวเตอร์
+                    สำหรับผู้ที่สนใจประกอบคอมพิวเตอร์ด้วยตนเอง หรือต้องการศึกษาหาความรู้เพิ่มเติมเกี่ยวกับฮาร์ดแวร์
+                    โดยรวบรวมข้อมูลที่ถูกต้องและทันสมัยมาไว้ในที่เดียว
+                </p>
+                <hr>
+                <div class="tools-used">
+                    <h3>🛠️ เครื่องมือที่ใช้พัฒนา</h3>
+                    <div class="badges">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="creator-section">
+        <div class="container">
+            <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">คณะผู้จัดทำ</h1>
+
+            <div class="creators-list">
+
+                <div class="creator-row">
+                    <div class="creator-pic">
+                        <img src="img/person1.jpg" alt="รูปคนที่ 1">
+                    </div>
+                    <div class="creator-details">
+                        <h2>นายอภิชาติพงศ์ ใจดี (ชื่อเล่น : คิว)</h2>
+                        <p class="student-id">รหัสนักศึกษา: 67319100007</p>
+                        <p class="role"><strong>หน้าที่:</strong> รวบรวมข้อมูลเนื้อหา, หารูปภาพประกอบ </p>
+                    </div>
+                    <div class="creator-contact">
+                        <button class="social-btn" onclick="openContact(
+                            'นายอภิชาติพงศ์ ใจดี', 
+                            'img/person1.jpg', 
+                            'ลิงก์เฟส', 
+                            'ลิงก์ไลน์',
+                            'ลิงก์ไอจี', 
+                            'ลิงก์ยูทูป'
+                        )">ช่องทางการติดต่อ</button>
+                    </div>
+                </div>
+
+                <div class="creator-row">
+                    <div class="creator-pic">
+                        <img src="img/person2.jpg" alt="รูปคนที่ 2">
+                    </div>
+                    <div class="creator-details">
+                        <h2>นายรัชชานนท์ หงษ์พรม (ชื่อเล่น : โอ)</h2>
+                        <p class="student-id">รหัสนักศึกษา: 67319100009</p>
+                        <p class="role"><strong>หน้าที่:</strong> จัดทำรูปเล่มรายงานโครงงาน</p>
+                    </div>
+                    <div class="creator-contact">
+                        <button class="social-btn" onclick="openContact(
+                            'นายรัชชานนท์ หงษ์พรม', 
+                            'img/person2.jpg', 
+                            'ลิงก์เฟส', 
+                            'ลิงก์ไลน์',
+                            'ลิงก์ไอจี', 
+                            'ลิงก์ยูทูป'
+                        )">ช่องทางการติดต่อ</button>
+                    </div>
+                </div>
+
+
+                <div class="creator-row">
+                    <div class="creator-pic">
+                        <img src="img/person3.jpg" alt="รูปคนที่ 3">
+                    </div>
+                    <div class="creator-details">
+                        <h2>นายธนภัทร ยุ้ยประยูร (ชื่อเล่น : เต้)</h2>
+                        <p class="student-id">รหัสนักศึกษา: 67319100010</p>
+                        <p class="role"><strong>หน้าที่:</strong> หัวหน้ากลุ่ม, ออกแบบหน้าเว็บ (UX/UI)<br>เขียนโค้ด
+                            HTML/CSS, จัดทำระบบ Dark Mode</p>
+                        <p><a href="tel:0811842596">เบอร์ติดต่อ: 081-184-2596</a></p>
+                    </div>
+                    <div class="creator-contact">
+                        <button class="social-btn" onclick="openContact(
+                            'นายธนภัทร ยุ้ยประยูร', 
+                            'img/person3.jpg', 
+                            'ลิงก์เฟส', 
+                            'ลิงก์ไลน์',
+                            'ลิงก์ไอจี', 
+                            'ลิงก์ยูทูป'
+                        )">ช่องทางการติดต่อ</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contactus">
+        <div class="container">
+            <div class="contactus-con">
+                <div class="contactus-info">
+                    <h3>ติดต่อเรา</h3>
+                    <p>วิทยาลัยพณิชยการบางนา</p>
+                    <a href="#" class="contactus-btn">ดูรายละเอียดเพิ่มเติม</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="กลับขึ้นด้านบน">
+        <span class="scroll-icon">⬆️</span>
+        <span class="scroll-text">กลับสู่ด้านบน</span>
+    </button>
+
+    <div id="contactPopup" class="contact-popup">
+        <div class="contact-content">
+            <span class="close-popup" onclick="closeContact()">&times;</span>
+            <img id="popupImg" src="" alt="Profile" class="contact-avatar">
+            <h3 id="popupName">ชื่อผู้จัดทำ</h3>
+            <p>เลือกช่องทางการติดต่อ</p>
+
+            <div class="contact-links">
+                <a id="popupFB" href="#" target="_blank" class="contact-link-item fb-btn">
+                    🔵 Facebook
+                </a>
+                <a id="popupLine" href="#" target="_blank" class="contact-link-item line-btn">
+                    🟢 Line
+                </a>
+                <a id="popupIG" href="#" target="_blank" class="contact-link-item ig-btn">
+                    📷 Instagram
+                </a>
+                <a id="popupYT" href="#" target="_blank" class="contact-link-item yt-btn">
+                    📺 YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =========================================
+        // 1. Contact Popup Logic (ฉบับแก้ปัญหา Mobile)
+        // =========================================
+
+        // ประกาศตัวแปร popup ไว้ข้างนอกเพื่อให้ฟังก์ชันอื่นเรียกใช้ได้
+        var popup = document.getElementById("contactPopup");
+
+        function openContact(name, imgSrc, fbLink, lineLink, igLink, ytLink) {
+            // ดึง Element มารอไว้ (ดึงใหม่ทุกครั้งเพื่อความชัวร์)
+            var pName = document.getElementById("popupName");
+            var pImg = document.getElementById("popupImg");
+            var pFB = document.getElementById("popupFB");
+            var pLine = document.getElementById("popupLine");
+            var pIG = document.getElementById("popupIG");
+            var pYT = document.getElementById("popupYT");
+
+            // ถ้าหา Element ไม่เจอ ให้หยุดทำงาน (กัน Error)
+            if (!popup || !pName || !pImg || !pIG || !pYT) return;
+
+            // ใส่ข้อมูล
+            pName.innerText = name;
+            pImg.src = imgSrc;
+
+            // ตั้งค่าลิงก์ Facebook
+            if (fbLink && fbLink !== '#') {
+                pFB.href = fbLink;
+                pFB.style.display = "flex";
+            } else {
+                pFB.style.display = "none";
+            }
+
+            // ตั้งค่าลิงก์ Line
+            if (lineLink && lineLink !== '#') {
+                pLine.href = lineLink;
+                pLine.style.display = "flex";
+            } else {
+                pLine.style.display = "none";
+            }
+
+            // ตั้งค่าลิงก์ Instagram
+            if (igLink && igLink !== '#') {
+                pIG.href = igLink;
+                pIG.style.display = "flex";
+            } else {
+                pIG.style.display = "none";
+            }
+
+            // ตั้งค่าลิงก์ YouTube
+            if (ytLink && ytLink !== '#') {
+                pYT.href = ytLink;
+                pYT.style.display = "flex";
+            } else {
+                pYT.style.display = "none";
+            }
+            // แสดง Popup
+            popup.style.display = "flex";
+        }
+
+        function closeContact() {
+            if (popup) popup.style.display = "none";
+        }
+
+        // คลิกพื้นที่ว่างๆ รอบๆ เพื่อปิด Popup
+        window.onclick = function (event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+
+        // =========================================
+        // 2. THEME TOGGLE
+        // =========================================
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeTextMobile = document.getElementById('theme-text-mobile');
+        const themeTooltip = document.getElementById('theme-tooltip');
+        const body = document.body;
+
+        function updateButton(isDark) {
+            if (isDark) {
+                if (themeIcon) themeIcon.innerText = '☀️';
+                if (themeTextMobile) themeTextMobile.innerText = 'โหมดสว่าง';
+                if (themeTooltip) themeTooltip.innerText = 'เข้าสู่โหมดสว่าง';
+            } else {
+                if (themeIcon) themeIcon.innerText = '🌙';
+                if (themeTextMobile) themeTextMobile.innerText = 'โหมดมืด';
+                if (themeTooltip) themeTooltip.innerText = 'เข้าสู่โหมดมืด';
+            }
+        }
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            updateButton(true);
+        } else {
+            updateButton(false);
+        }
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+                body.classList.toggle('dark-mode');
+                const isDarkMode = body.classList.contains('dark-mode');
+                if (isDarkMode) { localStorage.setItem('theme', 'dark'); }
+                else { localStorage.setItem('theme', 'light'); }
+                updateButton(isDarkMode);
+            });
+        }
+
+        // =========================================
+        // 3. MOBILE MENU
+        // =========================================
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                if (navMenu.classList.contains('active')) { hamburger.innerText = '✕'; }
+                else { hamburger.innerText = '☰'; }
+            });
+        }
+
+        // =========================================
+        // 4. SCROLL TO TOP
+        // =========================================
+        let mybutton = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "flex";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>
