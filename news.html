@@ -20,7 +20,7 @@
                     <li><a href="index.html">หน้าหลัก</a></li>
                     <li><a href="parts.html">ชิ้นส่วนคอมพิวเตอร์</a></li>
                     <li><a href="news.html">ข่าว/ประชาสัมพันธ์</a></li>
-                    <li><a href="creator.html">ผู้จัดทำ/ติดต่อเรา</a></li>
+                    <li><a href="creator.html">ผู้จัดทำ</a></li>
                     <li>
                         <button id="theme-toggle" class="btn-toggle">
                             <span id="theme-icon">🌙</span>
@@ -41,6 +41,8 @@
             <div class="content-title">
                 <h3>📰 ข่าวสารและกิจกรรมล่าสุด</h3>
                 <p>อัปเดตความเคลื่อนไหวในวงการคอมพิวเตอร์และกิจกรรมของวิทยาลัย</p>
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="🔍 ค้นหาข่าวสาร"
+                    class="search-box">
             </div>
 
             <div class="content-con">
@@ -64,7 +66,8 @@
                 <div class="content-item">
                     <img src="img/mainboard.jpg" alt="News 3">
                     <h3>เมนบอร์ดเปลี่ยนโฉม! รู้จักกับ RAM แบบ CAMM2</h3>
-                    <p>เตรียมลืมภาพจำแรมแนวตั้งไปได้เลย! พบกับมาตรฐานใหม่บนเมนบอร์ดที่จะทำให้เครื่องแรงและเย็นกว่าเดิม...</p>
+                    <p>เตรียมลืมภาพจำแรมแนวตั้งไปได้เลย!
+                        พบกับมาตรฐานใหม่บนเมนบอร์ดที่จะทำให้เครื่องแรงและเย็นกว่าเดิม...</p>
                     <a href="news_mainboard.html" class="content-btn">อ่านต่อ</a>
                 </div>
 
@@ -78,7 +81,8 @@
                 <div class="content-item">
                     <img src="img/storage.jpg" alt="News 5">
                     <h3>SSD vs HDD ต่างกันอย่างไร?</h3>
-                    <p>เจาะลึกข้อดีข้อเสียของหน่วยความจำทั้งสองแบบ เพื่อให้คุณตัดสินใจเลือกใช้ได้อย่างคุ้มค่าที่สุด...</p>
+                    <p>เจาะลึกข้อดีข้อเสียของหน่วยความจำทั้งสองแบบ เพื่อให้คุณตัดสินใจเลือกใช้ได้อย่างคุ้มค่าที่สุด...
+                    </p>
                     <a href="news_storage.html" class="content-btn">อ่านต่อ</a>
                 </div>
 
@@ -89,6 +93,15 @@
                     <a href="news_powersupply.html" class="content-btn">อ่านต่อ</a>
                 </div>
 
+                <div id="noResult" class="noResult" style="display: none; text-align: center; padding: 40px 20px;">
+                    <h3 style="margin-bottom: 10px;">❌ ไม่พบข้อมูล "<span id="searchKeyword"
+                            style="color: #f44336;"></span>" ในระบบของเรา</h3>
+                    <p style="margin-bottom: 20px;">แต่คุณสามารถค้นหาข้อมูลนี้เพิ่มเติมได้จาก Google ทันที</p>
+
+                    <button id="googleSearchBtn" class="google-btn">
+                        🔍 ค้นหาบน Google
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -108,6 +121,28 @@
         <span class="scroll-icon">⬆️</span>
         <span class="scroll-text">กลับสู่ด้านบน</span>
     </button>
+    <button class="floating-survey-btn" onclick="openSurveyPopup()">
+        📝 ประเมินเว็บไซต์
+    </button>
+    <div id="surveyPopup" class="contact-popup">
+        <div class="contact-content">
+
+            <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #000000;">ช่วยเราพัฒนาเว็บไซต์! 💡
+            </h3>
+            <p style="color: #000; line-height: 1.6;">
+                รบกวนเวลาสัก 1-2 นาที ทำแบบประเมินความพึงพอใจ เพื่อนำข้อมูลไปพัฒนาโครงงาน <strong>What's in
+                    a
+                    COM</strong> ให้ดียิ่งขึ้นครับ
+            </p>
+
+            <div class="survey-actions">
+                <a href=https://forms.gle/NtfnPa1GbgzreKJW6 target="_blank" class="survey-btn-primary"
+                    onclick="closeSurveyPopup()">ยินดีเลย!</a>
+
+                <button class="survey-btn-secondary" onclick="closeSurveyPopup()">ไว้โอกาสหน้า</button>
+            </div>
+        </div>
+    </div>
     <script>
         // =========================================
         // 1. THEME TOGGLE (LOGIC ใหม่: รองรับ Tooltip & Mobile Text)
@@ -194,19 +229,21 @@
         // =========================================
         // 4. SEARCH FUNCTION (สำหรับหน้า Parts)
         // =========================================
+        // --- Search Function (อัปเดตระบบดึงคำค้นหาไป Google) ---
         function searchFunction() {
             let input = document.getElementById('searchInput');
-            if (!input) return; // ถ้าไม่มีช่องค้นหา ให้ข้ามไป (กัน error หน้าอื่น)
-
             let filter = input.value.toUpperCase();
             let cards = document.getElementsByClassName('content-item');
             let noResult = document.getElementById('noResult');
             let hasMatch = false;
 
+            // ระบบค้นหาในเว็บของเรา
             for (let i = 0; i < cards.length; i++) {
-                let h4 = cards[i].getElementsByTagName("h4")[0];
-                if (h4) {
-                    let txtValue = h4.textContent || h4.innerText;
+                // หา h4 (หน้า parts) หรือ h3 (หน้า news)
+                let heading = cards[i].getElementsByTagName("h4")[0] || cards[i].getElementsByTagName("h3")[0];
+
+                if (heading) {
+                    let txtValue = heading.textContent || heading.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         cards[i].style.display = "";
                         hasMatch = true;
@@ -216,9 +253,50 @@
                 }
             }
 
+            // จัดการกล่อง noResult
             if (noResult) {
-                if (hasMatch) { noResult.style.display = "none"; }
-                else { noResult.style.display = "block"; }
+                if (hasMatch || filter === "") {
+                    // ถ้าเจอ หรือไม่ได้พิมพ์อะไรเลย ให้ซ่อนกล่อง
+                    noResult.style.display = "none";
+                } else {
+                    // ถ้าไม่เจอ ให้โชว์กล่อง
+                    noResult.style.display = "block";
+
+                    // 1. เอาคำที่พิมพ์มาโชว์ในกล่องข้อความ
+                    document.getElementById('searchKeyword').innerText = input.value;
+
+                    // 2. สั่งให้ปุ่มทำงาน: เด้งไป Google พร้อมพ่วงคำว่า "คอมพิวเตอร์" ไปด้วยเพื่อให้ผลลัพธ์แม่นยำขึ้น
+                    document.getElementById('googleSearchBtn').onclick = function () {
+                        // ตัวอย่าง: ถ้าพิมพ์ "Apple" มันจะไปค้นใน Google ว่า "Apple คอมพิวเตอร์"
+                        let googleQuery = input.value;
+                        let googleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(googleQuery);
+                        window.open(googleUrl, '_blank'); // เปิดแท็บใหม่
+                    };
+                }
+            }
+        }
+        // =========================================
+        // ระบบ Popup แบบสอบถาม (Survey Popup)
+        // =========================================
+        var surveyPopup = document.getElementById("surveyPopup");
+
+        function openSurveyPopup() {
+            if (surveyPopup) surveyPopup.style.display = "flex";
+        }
+
+        function closeSurveyPopup() {
+            if (surveyPopup) surveyPopup.style.display = "none";
+        }
+
+        // อัปเดตระบบคลิกพื้นที่ว่างเพื่อปิด Popup (ครอบคลุมทั้ง Popup ติดต่อ และ Popup แบบสอบถาม)
+        window.onclick = function (event) {
+            // 1. ตรวจสอบว่ามีตัวแปร popup (ของช่องทางติดต่อ) หรือไม่
+            if (typeof popup !== 'undefined' && event.target == popup) {
+                popup.style.display = "none";
+            }
+            // 2. ตรวจสอบ popup แบบสอบถาม
+            if (event.target == surveyPopup) {
+                surveyPopup.style.display = "none";
             }
         }
     </script>

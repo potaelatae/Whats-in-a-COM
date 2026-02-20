@@ -31,7 +31,7 @@
                     <li><a href="index.html">หน้าหลัก</a></li>
                     <li><a href="parts.html">ชิ้นส่วนคอมพิวเตอร์</a></li>
                     <li><a href="news.html">ข่าว/ประชาสัมพันธ์</a></li>
-                    <li><a href="creator.html">ผู้จัดทำ/ติดต่อเรา</a></li>
+                    <li><a href="creator.html">ผู้จัดทำ</a></li>
                     <li>
                         <button id="theme-toggle" class="btn-toggle">
                             <span id="theme-icon">🌙</span>
@@ -76,42 +76,42 @@
 
                 <div class="creator-row">
                     <div class="creator-pic">
-                        <img src="img/person1.jpg" alt="รูปคนที่ 1">
+                        <img src="img/q.jpg" alt="รูปคนที่ 1">
                     </div>
                     <div class="creator-details">
                         <h2>นายอภิชาติพงศ์ ใจดี (ชื่อเล่น : คิว)</h2>
                         <p class="student-id">รหัสนักศึกษา: 67319100007</p>
                         <p class="role"><strong>หน้าที่:</strong> รวบรวมข้อมูลเนื้อหา, หารูปภาพประกอบ </p>
+                        <p><a href="tel:0952538941">เบอร์ติดต่อ: 095-253-8941</a></p>
                     </div>
                     <div class="creator-contact">
                         <button class="social-btn" onclick="openContact(
                             'นายอภิชาติพงศ์ ใจดี', 
-                            'img/person1.jpg', 
-                            'ลิงก์เฟส', 
-                            'ลิงก์ไลน์',
-                            'ลิงก์ไอจี', 
-                            'ลิงก์ยูทูป'
+                            'img/q.jpg',
+                            'https://line.me/ti/p/zcYUM8OpI6',
+                            'https://www.instagram.com/apichat506?igsh=MXA4bnNwNmVkOHBhYw==', 
+                            'https://youtube.com/channel/UCoI1cC6yDdF-vqv6AUWnk_g?si=zCkRGBoMAoLgWVvG'
                         )">ช่องทางการติดต่อ</button>
                     </div>
                 </div>
 
                 <div class="creator-row">
                     <div class="creator-pic">
-                        <img src="img/person2.jpg" alt="รูปคนที่ 2">
+                        <img src="img/o.jpg" alt="รูปคนที่ 2">
                     </div>
                     <div class="creator-details">
                         <h2>นายรัชชานนท์ หงษ์พรม (ชื่อเล่น : โอ)</h2>
                         <p class="student-id">รหัสนักศึกษา: 67319100009</p>
                         <p class="role"><strong>หน้าที่:</strong> จัดทำรูปเล่มรายงานโครงงาน</p>
+                        <p><a href="tel:0810299482">เบอร์ติดต่อ: 081-029-9482</a></p>
                     </div>
                     <div class="creator-contact">
                         <button class="social-btn" onclick="openContact(
                             'นายรัชชานนท์ หงษ์พรม', 
-                            'img/person2.jpg', 
-                            'ลิงก์เฟส', 
-                            'ลิงก์ไลน์',
-                            'ลิงก์ไอจี', 
-                            'ลิงก์ยูทูป'
+                            'img/o.jpg',
+                            'https://line.me/ti/p/vfjuD8dYnc',
+                            'https://www.instagram.com/dmon_tier?igsh=MTVyam9xcDhpNGJrbw==',
+                            'https://youtube.com/@just_a_nap?si=IwNP11kL01rPCkcW'
                         )">ช่องทางการติดต่อ</button>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
 
                 <div class="creator-row">
                     <div class="creator-pic">
-                        <img src="img/person3.jpg" alt="รูปคนที่ 3">
+                        <img src="img/tae.jpg" alt="รูปคนที่ 3">
                     </div>
                     <div class="creator-details">
                         <h2>นายธนภัทร ยุ้ยประยูร (ชื่อเล่น : เต้)</h2>
@@ -131,15 +131,13 @@
                     <div class="creator-contact">
                         <button class="social-btn" onclick="openContact(
                             'นายธนภัทร ยุ้ยประยูร', 
-                            'img/person3.jpg', 
-                            'ลิงก์เฟส', 
-                            'ลิงก์ไลน์',
-                            'ลิงก์ไอจี', 
-                            'ลิงก์ยูทูป'
+                            'img/tae.jpg',
+                            'https://line.me/ti/p/7k_TB38xQp',
+                            'https://www.instagram.com/po_latae?igsh=MXZsN3M4NmVuMzZpMg==', 
+                            'https://www.youtube.com/@Latae009'
                         )">ช่องทางการติดต่อ</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -160,7 +158,6 @@
         <span class="scroll-icon">⬆️</span>
         <span class="scroll-text">กลับสู่ด้านบน</span>
     </button>
-
     <div id="contactPopup" class="contact-popup">
         <div class="contact-content">
             <span class="close-popup" onclick="closeContact()">&times;</span>
@@ -169,9 +166,6 @@
             <p>เลือกช่องทางการติดต่อ</p>
 
             <div class="contact-links">
-                <a id="popupFB" href="#" target="_blank" class="contact-link-item fb-btn">
-                    🔵 Facebook
-                </a>
                 <a id="popupLine" href="#" target="_blank" class="contact-link-item line-btn">
                     🟢 Line
                 </a>
@@ -184,7 +178,28 @@
             </div>
         </div>
     </div>
+    <button class="floating-survey-btn" onclick="openSurveyPopup()">
+        📝 ประเมินเว็บไซต์
+    </button>
+    <div id="surveyPopup" class="contact-popup">
+        <div class="contact-content">
 
+            <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #000000;">ช่วยเราพัฒนาเว็บไซต์! 💡
+            </h3>
+            <p style="color: #000; line-height: 1.6;">
+                รบกวนเวลาสัก 1-2 นาที ทำแบบประเมินความพึงพอใจ เพื่อนำข้อมูลไปพัฒนาโครงงาน <strong>What's in
+                    a
+                    COM</strong> ให้ดียิ่งขึ้นครับ
+            </p>
+
+            <div class="survey-actions">
+                <a href=https://forms.gle/NtfnPa1GbgzreKJW6 target="_blank" class="survey-btn-primary"
+                    onclick="closeSurveyPopup()">ยินดีเลย!</a>
+
+                <button class="survey-btn-secondary" onclick="closeSurveyPopup()">ไว้โอกาสหน้า</button>
+            </div>
+        </div>
+    </div>
     <script>
         // =========================================
         // 1. Contact Popup Logic (ฉบับแก้ปัญหา Mobile)
@@ -193,11 +208,10 @@
         // ประกาศตัวแปร popup ไว้ข้างนอกเพื่อให้ฟังก์ชันอื่นเรียกใช้ได้
         var popup = document.getElementById("contactPopup");
 
-        function openContact(name, imgSrc, fbLink, lineLink, igLink, ytLink) {
+        function openContact(name, imgSrc, lineLink, igLink, ytLink) {
             // ดึง Element มารอไว้ (ดึงใหม่ทุกครั้งเพื่อความชัวร์)
             var pName = document.getElementById("popupName");
             var pImg = document.getElementById("popupImg");
-            var pFB = document.getElementById("popupFB");
             var pLine = document.getElementById("popupLine");
             var pIG = document.getElementById("popupIG");
             var pYT = document.getElementById("popupYT");
@@ -209,16 +223,7 @@
             pName.innerText = name;
             pImg.src = imgSrc;
 
-            // ตั้งค่าลิงก์ Facebook
-            if (fbLink && fbLink !== '#') {
-                pFB.href = fbLink;
-                pFB.style.display = "flex";
-            } else {
-                pFB.style.display = "none";
-            }
-
-            // ตั้งค่าลิงก์ Line
-            if (lineLink && lineLink !== '#') {
+             if (lineLink && lineLink !== '#') {
                 pLine.href = lineLink;
                 pLine.style.display = "flex";
             } else {
@@ -328,6 +333,30 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        }
+        // =========================================
+        // ระบบ Popup แบบสอบถาม (Survey Popup)
+        // =========================================
+        var surveyPopup = document.getElementById("surveyPopup");
+
+        function openSurveyPopup() {
+            if (surveyPopup) surveyPopup.style.display = "flex";
+        }
+
+        function closeSurveyPopup() {
+            if (surveyPopup) surveyPopup.style.display = "none";
+        }
+
+        // อัปเดตระบบคลิกพื้นที่ว่างเพื่อปิด Popup (ครอบคลุมทั้ง Popup ติดต่อ และ Popup แบบสอบถาม)
+        window.onclick = function (event) {
+            // 1. ตรวจสอบว่ามีตัวแปร popup (ของช่องทางติดต่อ) หรือไม่
+            if (typeof popup !== 'undefined' && event.target == popup) {
+                popup.style.display = "none";
+            }
+            // 2. ตรวจสอบ popup แบบสอบถาม
+            if (event.target == surveyPopup) {
+                surveyPopup.style.display = "none";
+            }
         }
     </script>
 </body>

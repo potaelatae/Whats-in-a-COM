@@ -1366,11 +1366,9 @@ body.dark-mode .btn-toggle {
 
 /* รูปภาพ */
 .creator-pic img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    /* วงกลม */
-    object-fit: cover;
+    width: 150px;
+    height: 150px;   
+    border-radius: 100px;
     border: 5px solid #f0f0f0;
 }
 
@@ -1380,6 +1378,10 @@ body.dark-mode .btn-toggle {
     /* ขยายเต็มพื้นที่ว่าง */
     padding: 0 30px;
     text-align: left;
+}
+.creator-details p a{
+    color: #000;
+    font-weight: bold;
 }
 
 .creator-details h2 {
@@ -1724,8 +1726,8 @@ body.dark-mode .check-list-pwsp {
 }
 
 .contact-avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
@@ -1875,13 +1877,123 @@ body.dark-mode .check-list-pwsp {
         /* กันข้อความชิดขอบจอเกินไป */
     }
 }
+
 /* =========================================
    แก้สีตัวหนังสือจางใน Dark Mode (หน้าข่าว)
    ========================================= */
 body.dark-mode .news-meta {
-    color: #e0e0e0 !important; /* เปลี่ยนเป็นสีขาวควันบุหรี่ ให้ตัดกับพื้นหลัง */
+    color: #e0e0e0 !important;
+    /* เปลี่ยนเป็นสีขาวควันบุหรี่ ให้ตัดกับพื้นหลัง */
 }
 
 body.dark-mode .news-meta span {
-    color: #e0e0e0 !important; /* บังคับสีข้อความข้างในด้วย */
+    color: #e0e0e0 !important;
+    /* บังคับสีข้อความข้างในด้วย */
+}
+
+.google-btn {
+    font-size: 25px;
+    background-image: linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
+    background-size: 300% auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    width: 280px;
+    height: 50px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(252, 31, 11, 1);
+    /* เงาเรืองแสงสีแดง */
+}
+
+/* =========================================
+   ปุ่มลอยแบบสอบถาม (Floating Survey Button)
+   ========================================= */
+.floating-survey-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    /* ตำแหน่งซ้ายล่าง */
+    background-image: linear-gradient(45deg, #4285F4, #34A853);
+    /* สีไล่ระดับของ Google */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    /* ทำให้ปุ่มมน */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 990;
+    /* ให้อยู่บนสุด แต่ต่ำกว่า Popup */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.floating-survey-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ปุ่มใน Popup แบบสอบถาม */
+.survey-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.survey-btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.survey-btn-primary:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.survey-btn-secondary {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.survey-btn-secondary:hover {
+    background-color: rgb(241, 55, 55);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode สำหรับปุ่มปฏิเสธ */
+body.dark-mode .survey-btn-secondary {
+    background-color: #ff4d4d;
+    color: #ffffff;
+}
+
+body.dark-mode .survey-btn-secondary:hover {
+    background-color: rgb(241, 55, 55);
+    transform: translateY(-2px);
+} 
+.creator-details .role {
+    color: #333;
+    font-size: 1.1rem;
 }
