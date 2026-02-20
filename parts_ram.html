@@ -113,7 +113,27 @@
         <span class="scroll-icon">⬆️</span>
         <span class="scroll-text">กลับสู่ด้านบน</span>
     </button>
+    <button class="floating-survey-btn" onclick="openSurveyPopup()">
+        📝 ประเมินเว็บไซต์
+    </button>
 
+    <div id="surveyPopup" class="contact-popup">
+        <div class="contact-content">
+
+            <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #000000;">ช่วยเราพัฒนาเว็บไซต์! 💡</h3>
+            <p style="color: #000000; line-height: 1.6;">
+                รบกวนเวลาสัก 1-2 นาที ทำแบบประเมินความพึงพอใจ เพื่อนำข้อมูลไปพัฒนาโครงงาน <strong>What's in a
+                    COM</strong> ให้ดียิ่งขึ้นครับ
+            </p>
+
+            <div class="survey-actions">
+                <a href=https://forms.gle/NtfnPa1GbgzreKJW6 target="_blank" class="survey-btn-primary"
+                    onclick="closeSurveyPopup()">ยินดีเลย!</a>
+
+                <button class="survey-btn-secondary" onclick="closeSurveyPopup()">ไว้โอกาสหน้า</button>
+            </div>
+        </div>
+    </div>
     <script>
         // --- Dark Mode ---
         const toggleBtn = document.getElementById('theme-toggle');
@@ -164,6 +184,30 @@
         });
         if (closeSpan) closeSpan.onclick = function () { modal.style.display = "none"; }
         window.onclick = function (event) { if (event.target == modal) modal.style.display = "none"; }
+        // =========================================
+        // ระบบ Popup แบบสอบถาม (Survey Popup)
+        // =========================================
+        var surveyPopup = document.getElementById("surveyPopup");
+
+        function openSurveyPopup() {
+            if (surveyPopup) surveyPopup.style.display = "flex";
+        }
+
+        function closeSurveyPopup() {
+            if (surveyPopup) surveyPopup.style.display = "none";
+        }
+
+        // อัปเดตระบบคลิกพื้นที่ว่างเพื่อปิด Popup (ครอบคลุมทั้ง Popup ติดต่อ และ Popup แบบสอบถาม)
+        window.onclick = function (event) {
+            // 1. ตรวจสอบว่ามีตัวแปร popup (ของช่องทางติดต่อ) หรือไม่
+            if (typeof popup !== 'undefined' && event.target == popup) {
+                popup.style.display = "none";
+            }
+            // 2. ตรวจสอบ popup แบบสอบถาม
+            if (event.target == surveyPopup) {
+                surveyPopup.style.display = "none";
+            }
+        }
     </script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
