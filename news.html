@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <nav>
         <div class="container">
             <div class="nav-con">
@@ -37,16 +36,13 @@
 
     <section class="content">
         <div class="container">
-
             <div class="content-title">
                 <h3>📰 ข่าวสารและกิจกรรมล่าสุด</h3>
                 <p>อัปเดตความเคลื่อนไหวในวงการคอมพิวเตอร์และกิจกรรมของวิทยาลัย</p>
                 <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="🔍 ค้นหาข่าวสาร"
                     class="search-box">
             </div>
-
             <div class="content-con">
-
                 <div class="content-item">
                     <img src="img/cpu.jpg" alt="News 1">
                     <h3>เปิดตัว CPU รุ่นใหม่ล่าสุด แรงกว่าเดิม 20%</h3>
@@ -54,7 +50,6 @@
                         พร้อมวางจำหน่ายแล้ววันนี้...</p>
                     <a href="news_cpu.html" class="content-btn">อ่านต่อ</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/gpu.jpg" alt="News 2">
                     <h3>การ์ดจอขาดตลาด! ราคาพุ่งสูงขึ้นอีกครั้ง</h4>
@@ -62,7 +57,6 @@
                             และแนวโน้มราคาจะเป็นอย่างไรในปีหน้า...</p>
                         <a href="news_gpu.html" class="content-btn">อ่านต่อ</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/mainboard.jpg" alt="News 3">
                     <h3>เมนบอร์ดเปลี่ยนโฉม! รู้จักกับ RAM แบบ CAMM2</h3>
@@ -70,14 +64,12 @@
                         พบกับมาตรฐานใหม่บนเมนบอร์ดที่จะทำให้เครื่องแรงและเย็นกว่าเดิม...</p>
                     <a href="news_mainboard.html" class="content-btn">อ่านต่อ</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/ram.jpg" alt="News 4">
                     <h3>แนะนำเทคนิคเลือก RAM ให้เหมาะกับงาน</h3>
                     <p>RAM แบบไหนเหมาะกับเล่นเกม? แบบไหนเหมาะกับตัดต่อ? มาดูวิธีเลือกซื้อง่ายๆ ที่คุณก็ทำเองได้...</p>
                     <a href="news_ram.html" class="content-btn">อ่านต่อ</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/storage.jpg" alt="News 5">
                     <h3>SSD vs HDD ต่างกันอย่างไร?</h3>
@@ -85,19 +77,15 @@
                     </p>
                     <a href="news_storage.html" class="content-btn">อ่านต่อ</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/powersupply.jpg" alt="News 6">
                     <h3>ระวัง! พาวเวอร์ซัพพลายปลอมระบาด</h3>
                     <p>แนะวิธีสังเกตสินค้าลอกเลียนแบบ เพื่อความปลอดภัยของคอมพิวเตอร์และทรัพย์สินของคุณ...</p>
                     <a href="news_powersupply.html" class="content-btn">อ่านต่อ</a>
                 </div>
-
                 <div id="noResult" class="noResult" style="display: none; text-align: center; padding: 40px 20px;">
-                    <h3 style="margin-bottom: 10px;">❌ ไม่พบข้อมูล "<span id="searchKeyword"
-                            style="color: #f44336;"></span>" ในระบบของเรา</h3>
+                    <h3 style="margin-bottom: 10px;">❌ ไม่พบข้อมูล "<span id="searchKeyword"style="color: #f44336;"></span>" ในระบบของเรา</h3>
                     <p style="margin-bottom: 20px;">แต่คุณสามารถค้นหาข้อมูลนี้เพิ่มเติมได้จาก Google ทันที</p>
-
                     <button id="googleSearchBtn" class="google-btn">
                         🔍 ค้นหาบน Google
                     </button>
@@ -105,44 +93,48 @@
             </div>
         </div>
     </section>
-    <section class="contactus">
+
+    <footer class="site-footer-minimal">
         <div class="container">
-            <div class="contactus-con">
-                <div class="contactus-info">
-                    <h3>ติดต่อเรา</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda consectetur quasi
-                        quae, laudantium optio praesentium ipsa!</p>
-                    <a href="#" class="contactus-btn">ดูรายละเอียดเพิ่มเติม</a>
-                </div>
+            <h2>What's in a COM</h2>
+            <p>ไขความลับชิ้นส่วนคอมพิวเตอร์ฉบับเข้าใจง่าย<br>โครงงานโดยนักศึกษาวิทยาลัยพณิชยการบางนา</p>
+            <div class="footer-links-inline">
+                <a href="index.html">หน้าหลัก</a> |
+                <a href="parts.html">ชิ้นส่วนคอมพิวเตอร์</a> |
+                <a href="news.html">ข่าวสารและกิจกรรม</a> |
+                <a href="creator.html">ติดต่อผู้จัดทำ</a>
+            </div>
+            <div class="footer-bottom-minimal">
+                <p>&copy; 2026 What's in a COM. All rights reserved.</p>
             </div>
         </div>
-    </section>
+    </footer>
+    
     <button onclick="topFunction()" id="scrollToTopBtn" title="กลับขึ้นด้านบน">
         <span class="scroll-icon">⬆️</span>
         <span class="scroll-text">กลับสู่ด้านบน</span>
     </button>
+
     <button class="floating-survey-btn" onclick="openSurveyPopup()">
         📝 ประเมินเว็บไซต์
     </button>
+
     <div id="surveyPopup" class="contact-popup">
         <div class="contact-content">
-
             <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #000000;">ช่วยเราพัฒนาเว็บไซต์! 💡
             </h3>
             <p style="color: #000; line-height: 1.6;">
                 รบกวนเวลาสัก 1-2 นาที ทำแบบประเมินความพึงพอใจ เพื่อนำข้อมูลไปพัฒนาโครงงาน <strong>What's in
-                    a
-                    COM</strong> ให้ดียิ่งขึ้นครับ
+                    a COM</strong> ให้ดียิ่งขึ้นครับ
             </p>
-
             <div class="survey-actions">
                 <a href=https://forms.gle/NtfnPa1GbgzreKJW6 target="_blank" class="survey-btn-primary"
                     onclick="closeSurveyPopup()">ยินดีเลย!</a>
-
                 <button class="survey-btn-secondary" onclick="closeSurveyPopup()">ไว้โอกาสหน้า</button>
             </div>
         </div>
     </div>
+    
     <script>
         // =========================================
         // 1. THEME TOGGLE (LOGIC ใหม่: รองรับ Tooltip & Mobile Text)

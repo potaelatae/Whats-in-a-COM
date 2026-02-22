@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <nav>
         <div class="container">
             <div class="nav-con">
@@ -37,63 +36,52 @@
 
     <section class="content">
         <div class="container">
-
             <div class="content-title">
                 <h3>รายการชิ้นส่วนคอมพิวเตอร์</h3>
-
                 <input type="text" id="searchInput" onkeyup="searchFunction()"
                     placeholder="🔍 ค้นหาชิ้นส่วน (เช่น CPU, RAM)..." class="search-box">
             </div>
-
             <div class="content-con">
-
                 <div class="content-item">
                     <img src="img/cpu.jpg" alt="CPU" class="">
                     <h4>CPU | หน่วยประมวลผลกลาง</h4>
                     <p>หัวใจหลักของคอมพิวเตอร์ ทำหน้าที่คำนวณและประมวลผลคำสั่งต่างๆ</p>
                     <a href="parts_cpu.html" class="content-btn">ดูรายละเอียด</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/mainboard.jpg" alt="Mainboard" class="">
                     <h4>Mainboard | เมนบอร์ด</h4>
                     <p>แผงวงจรหลักที่เชื่อมต่ออุปกรณ์ทุกชิ้นเข้าด้วยกัน เปรียบเสมือนร่างกาย</p>
                     <a href="parts_mainboard.html" class="content-btn">ดูรายละเอียด</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/ram.jpg" alt="RAM" class="">
                     <h4>RAM | หน่วยความจำแรม</h4>
                     <p>หน่วยความจำชั่วคราว ใช้พักข้อมูลระหว่างที่โปรแกรมกำลังทำงาน</p>
                     <a href="parts_ram.html" class="content-btn">ดูรายละเอียด</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/gpu.jpg" alt="GPU" class="">
                     <h4>VGA / GPU | การ์ดจอ</h4>
                     <p>อุปกรณ์ประมวลผลภาพเพื่อแสดงผลบนหน้าจอ สำคัญมากสำหรับการเล่นเกม</p>
                     <a href="parts_gpu.html" class="content-btn">ดูรายละเอียด</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/storage.jpg" alt="Storage" class="">
                     <h4>Storage | หน่วยความจำถาวร</h4>
                     <p>หน่วยความจำถาวร ใช้เก็บข้อมูล ไฟล์เอกสาร รูปภาพ และโปรแกรมต่างๆ</p>
                     <a href="parts_storage.html" class="content-btn">ดูรายละเอียด</a>
                 </div>
-
                 <div class="content-item">
                     <img src="img/powersupply.jpg" alt="PSU" class="">
                     <h4>Power Supply | พาวเวอร์ซัพพลาย</h4>
                     <p>แหล่งจ่ายไฟให้กับอุปกรณ์ทุกชิ้นในเคส เปรียบเสมือนหัวใจสูบฉีดเลือด</p>
                     <a href="parts_powersupply.html" class="content-btn">ดูรายละเอียด</a>
                 </div>
-
                 <div id="noResult" class="noResult" style="display: none; text-align: center; padding: 40px 20px;">
                     <h3 style="margin-bottom: 10px;">❌ ไม่พบข้อมูล "<span id="searchKeyword"
                             style="color: #f44336;"></span>" ในระบบของเรา</h3>
                     <p style="margin-bottom: 20px;">แต่คุณสามารถค้นหาข้อมูลนี้เพิ่มเติมได้จาก Google ทันที</p>
-
                     <button id="googleSearchBtn" class="google-btn">
                         🔍 ค้นหาบน Google
                     </button>
@@ -102,49 +90,49 @@
         </div>
     </section>
 
-    <section class="contactus">
+    <footer class="site-footer-minimal">
         <div class="container">
-            <div class="contactus-con">
-                <div class="contactus-info">
-                    <h3>ติดต่อเรา</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda consectetur quasi
-                        quae, laudantium optio praesentium ipsa!</p>
-                    <a href="#" class="contactus-btn">ดูรายละเอียดเพิ่มเติม</a>
-                </div>
+            <h2>What's in a COM</h2>
+            <p>ไขความลับชิ้นส่วนคอมพิวเตอร์ฉบับเข้าใจง่าย<br>โครงงานโดยนักศึกษาวิทยาลัยพณิชยการบางนา</p>
+            <div class="footer-links-inline">
+                <a href="index.html">หน้าหลัก</a> |
+                <a href="parts.html">ชิ้นส่วนคอมพิวเตอร์</a> |
+                <a href="news.html">ข่าวสารและกิจกรรม</a> |
+                <a href="creator.html">ติดต่อผู้จัดทำ</a>
+            </div>
+            <div class="footer-bottom-minimal">
+                <p>&copy; 2026 What's in a COM. All rights reserved.</p>
             </div>
         </div>
-    </section>
+    </footer>
 
     <div id="myImageModal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="img01">
     </div>
+
     <button onclick="topFunction()" id="scrollToTopBtn" title="กลับขึ้นด้านบน">
         <span class="scroll-icon">⬆️</span>
         <span class="scroll-text">กลับสู่ด้านบน</span>
     </button>
+
     <button class="floating-survey-btn" onclick="openSurveyPopup()">
         📝 ประเมินเว็บไซต์
     </button>
+
     <div id="surveyPopup" class="contact-popup">
         <div class="contact-content">
-
-            <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #000000;">ช่วยเราพัฒนาเว็บไซต์! 💡
-            </h3>
+            <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #000000;">ช่วยเราพัฒนาเว็บไซต์! 💡</h3>
             <p style="color: #000; line-height: 1.6;">
-                รบกวนเวลาสัก 1-2 นาที ทำแบบประเมินความพึงพอใจ เพื่อนำข้อมูลไปพัฒนาโครงงาน <strong>What's in
-                    a
-                    COM</strong> ให้ดียิ่งขึ้นครับ
+                รบกวนเวลาสัก 1-2 นาที ทำแบบประเมินความพึงพอใจ เพื่อนำข้อมูลไปพัฒนาโครงงาน <strong>What's in a COM</strong> ให้ดียิ่งขึ้นครับ
             </p>
-
             <div class="survey-actions">
-                <a href=https://forms.gle/NtfnPa1GbgzreKJW6 target="_blank" class="survey-btn-primary"
-                    onclick="closeSurveyPopup()">ยินดีเลย!</a>
-
+                <a href=https://forms.gle/NtfnPa1GbgzreKJW6 target="_blank" class="survey-btn-primary"onclick="closeSurveyPopup()">ยินดีเลย!</a>
                 <button class="survey-btn-secondary" onclick="closeSurveyPopup()">ไว้โอกาสหน้า</button>
             </div>
         </div>
     </div>
+    
     <script>
         // =========================================
         // 1. THEME TOGGLE (LOGIC ใหม่: รองรับ Tooltip & Mobile Text)

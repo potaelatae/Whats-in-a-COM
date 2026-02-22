@@ -29,9 +29,9 @@
 
 | ลำดับ | ชื่อ-นามสกุล | สาขาวิชา | สถาบัน |
 | :---: | :--- | :--- | :--- |
-| 1 | [ใส่ชื่อคนที่ 1] | [ใส่สาขา] | [ใส่วิทยาลัย] |
-| 2 | [ใส่ชื่อคนที่ 2] | [ใส่สาขา] | [ใส่วิทยาลัย] |
-| 3 | [ใส่ชื่อคนที่ 3] | [ใส่สาขา] | [ใส่วิทยาลัย] |
+| 1 | นายอภิชาติพงศ์ ใจดี | เทคโนโลยีธุรกิจดิจิทัล | วิทยาลัยพณิชยการบางนา |
+| 2 | นายรัชชานนท์ หงษ์พรม | เทคโนโลยีธุรกิจดิจิทัล | วิทยาลัยพณิชยการบางนา |
+| 3 | นายธนภัทร ยุ้ยประยูร | เทคโนโลยีธุรกิจดิจิทัล | วิทยาลัยพณิชยการบางนา |
 
 ---
 
@@ -66,6 +66,6 @@ An educational website providing easy-to-understand information about computer p
 
 | No. | Name | Major | Institution |
 | :---: | :--- | :--- | :--- |
-| 1 | [Name 1] | [Major] | [Institution] |
-| 2 | [Name 2] | [Major] | [Institution] |
-| 3 | [Name 3] | [Major] | [Institution] |
+| 1 | [Name 1] | Digital Business Technology | Bangna Commercial College |
+| 2 | [Name 2] | Digital Business Technology | Bangna Commercial College |
+| 3 | [Name 3] | Digital Business Technology | Bangna Commercial College |

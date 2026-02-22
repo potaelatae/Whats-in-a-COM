@@ -327,22 +327,15 @@ body.dark-mode .maincontent-info .maincontent-btn:hover {
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-
     width: 350px;
     max-width: 100%;
-
-    /* [แก้จุดที่ 1] เปลี่ยนจาก height: 360px เป็น 100% */
-    /* เพื่อให้การ์ดยืดความสูงเท่ากับเพื่อนในแถวเดียวกัน แต่ขยายลงล่างได้ถ้าเนื้อหาเยอะ */
     height: 100%;
-
     flex-grow: 1;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* [แก้จุดที่ 2] อนุญาตให้หัวข้อข่าวตัดบรรทัดได้ (สำหรับชื่อข่าวที่ยาวๆ) */
 .content-item h4 {
     font-size: 25px;
     margin: 1rem 0;
@@ -350,16 +343,11 @@ body.dark-mode .maincontent-info .maincontent-btn:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* เปลี่ยนจาก nowrap เป็น normal เพื่อให้ตัดคำได้ */
     white-space: normal;
     overflow: visible;
-    /* โชว์ข้อความให้ครบ */
     text-overflow: clip;
-    /* เอา ... ออก */
     padding: 0 10px;
     line-height: 1.4;
-    /* เพิ่มระยะห่างบรรทัดนิดหน่อยให้อ่านง่าย */
 }
 
 .content-item img {
@@ -370,49 +358,6 @@ body.dark-mode .maincontent-info .maincontent-btn:hover {
     mix-blend-mode: multiply;
     margin-bottom: 15px;
     align-self: center;
-    /* จัดรูปกึ่งกลาง */
-}
-
-.content-item {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-
-    width: 350px;
-    max-width: 100%;
-
-    /* [แก้จุดที่ 1] เปลี่ยนจาก height: 360px เป็น 100% */
-    /* เพื่อให้การ์ดยืดความสูงเท่ากับเพื่อนในแถวเดียวกัน แต่ขยายลงล่างได้ถ้าเนื้อหาเยอะ */
-    height: 100%;
-
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* [แก้จุดที่ 2] อนุญาตให้หัวข้อข่าวตัดบรรทัดได้ (สำหรับชื่อข่าวที่ยาวๆ) */
-.content-item h4 {
-    font-size: 25px;
-    margin: 1rem 0;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /* เปลี่ยนจาก nowrap เป็น normal เพื่อให้ตัดคำได้ */
-    white-space: normal;
-    overflow: visible;
-    /* โชว์ข้อความให้ครบ */
-    text-overflow: clip;
-    /* เอา ... ออก */
-    padding: 0 10px;
-    line-height: 1.4;
-    /* เพิ่มระยะห่างบรรทัดนิดหน่อยให้อ่านง่าย */
 }
 
 .content-item h3 {
@@ -422,8 +367,6 @@ body.dark-mode .maincontent-info .maincontent-btn:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* ตัดคำถ้ายาวเกินไป */
     white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -461,12 +404,9 @@ body.dark-mode .maincontent-info .maincontent-btn:hover {
     background-color: rgb(60, 60, 60);
 }
 
-/* --- [FIX] กล่องแจ้งเตือนไม่พบข้อมูล (ขยายเต็ม + กลางจอ) --- */
 #noResult {
     display: none;
-    /* ซ่อนไว้ก่อน */
     grid-column: 1 / -1;
-    /* สั่งให้กินพื้นที่ครบทุกคอลัมน์ใน Grid */
     text-align: center;
     width: 100%;
     padding: 60px 20px;
@@ -494,63 +434,6 @@ body.dark-mode .maincontent-info .maincontent-btn:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* =========================================
-   5. CONTACT US (แก้ไขใหม่: เต็มจอ ไม่มีรูป)
-   ========================================= */
-.contactus {
-    padding: 60px 0;
-    background-color: rgb(223, 223, 197);
-}
-
-.contactus-con {
-    display: flex;
-    justify-content: center;
-    /* จัดให้อยู่ตรงกลาง */
-}
-
-.contactus-info {
-    width: 100%;
-    /* สั่งให้ขยายเต็มพื้นที่ */
-    max-width: 900px;
-    /* (ตัวเลือก) จำกัดความกว้างไม่ให้ตัวหนังสือยาวเหยียดเกินไปจนอ่านยาก */
-    text-align: center;
-    /* จัดตัวหนังสือให้อยู่กึ่งกลาง */
-}
-
-.contactus-info h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.contactus-info p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    color: #333;
-    /* ปรับสีตัวหนังสือให้อ่านง่ายขึ้น */
-}
-
-.contactus-info .contactus-btn {
-    display: inline-block;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s;
-}
-
-.contactus-info .contactus-btn:hover {
-    background-color: rgb(60, 60, 60);
-    transform: scale(1.05);
-}
-
-/* --- Dark Mode Support --- */
-body.dark-mode .contactus-info p {
-    color: #e6e6d8;
 }
 
 /* =========================================
@@ -686,20 +569,11 @@ body.dark-mode .contactus-info p {
 .article-content img {
     display: block;
     margin: 0 auto 30px auto;
-
     width: 100%;
     max-width: 400px;
-
     height: auto;
     object-fit: contain;
     cursor: zoom-in;
-
-    /* [แก้ไข] ลบหรือ Comment 2 บรรทัดนี้ออก เพื่อให้ภาพสีสดปกติ */
-    /* opacity: 0.9; */
-    /* <-- ลบอันนี้ */
-    /* mix-blend-mode: multiply; */
-    /* <-- ลบอันนี้ */
-
     border-radius: 15px;
 }
 
@@ -743,20 +617,14 @@ body.dark-mode .contactus-info p {
     padding: 20px 0;
     margin: 0;
     list-style: none;
-
-    /* Flexbox Settings */
     display: flex;
-
-    /* [แก้ตรงนี้] เปลี่ยนเป็น flex-start (คำสั่งมาตรฐานที่ชิดซ้ายแน่นอน) */
     justify-content: flex-start;
-
     align-items: center;
     width: 100%;
     font-size: 1.1rem;
     color: #555;
 }
 
-/* (ส่วนอื่นๆ ของ breadcrumbs ปล่อยไว้เหมือนเดิม) */
 .breadcrumbs li+li:before {
     padding: 0 10px;
     color: #ccc;
@@ -769,7 +637,6 @@ body.dark-mode .contactus-info p {
     font-weight: bold;
 }
 
-/* Search Box */
 .search-box {
     width: 100%;
     max-width: 600px;
@@ -798,33 +665,25 @@ body.dark-mode .contactus-info p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
     background-color: rgba(0, 0, 0, 0.5);
-    /* ดำโปร่งใส */
     backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    /* จัดกึ่งกลางจอแบบ Absolute */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     margin: 0;
     display: block;
-
     width: auto;
     height: auto;
     max-width: 90vw;
     max-height: 90vh;
     min-width: 50%;
-
     object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-
-    /* เรียกใช้ Animation ใหม่ */
     animation: zoomCenter 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -870,12 +729,10 @@ body.dark-mode .contactus-info p {
 body.dark-mode {
     background-color: #2b2b26;
     color: #e6e6d8;
-    scrollbar-color: #e6e6d8 #2b2b26;
 }
 
 body.dark-mode .maincontent,
 body.dark-mode .content,
-body.dark-mode .contactus,
 body.dark-mode .creator-section,
 body.dark-mode .article-section {
     background-color: #2b2b26;
@@ -897,6 +754,14 @@ body.dark-mode .content-title a,
 body.dark-mode .breadcrumbs,
 body.dark-mode .breadcrumbs li a {
     color: #ffffff;
+}
+
+body.dark-mode .contact-popup .contact-content h3 p {
+    color: #e6e6d8;
+}
+
+body.dark-mode .creator-details a {
+    color: #e6e6d8;
 }
 
 body.dark-mode .content-item p,
@@ -1090,14 +955,11 @@ body.dark-mode #scrollToTopBtn {
    SCROLL TO TOP BUTTON (เฉพาะส่วนปุ่ม)
    ========================================= */
 #scrollToTopBtn {
-    /* เริ่มต้นซ่อนไว้ (JS จะมาสั่ง show เป็น flex ทีหลัง) */
     display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 99;
-
-    /* รูปร่างเริ่มต้น: วงกลม */
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -1106,27 +968,19 @@ body.dark-mode #scrollToTopBtn {
     color: white;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
-    /* จัดไอคอนให้อยู่ตรงกลางเป๊ะๆ ด้วย Flexbox */
     justify-content: center;
     align-items: center;
     padding: 0;
-
-    /* เอฟเฟกต์การขยาย */
     transition: all 0.3s ease;
     overflow: hidden;
-    /* ซ่อนข้อความส่วนเกิน */
     white-space: nowrap;
 }
 
-/* ไอคอนลูกศร */
 .scroll-icon {
     font-size: 1.5rem;
 }
 
-/* ข้อความ "กลับสู่ด้านบน" */
 .scroll-text {
-    /* เริ่มต้นซ่อนไว้ */
     opacity: 0;
     width: 0;
     margin-left: 0;
@@ -1138,7 +992,6 @@ body.dark-mode #scrollToTopBtn {
 /* [Desktop Hover Effect] เอาเมาส์ชี้แล้วยืดออก */
 #scrollToTopBtn:hover {
     width: 160px;
-    /* ขยายความกว้าง */
     background-color: #333;
 }
 
@@ -1146,7 +999,6 @@ body.dark-mode #scrollToTopBtn {
     opacity: 1;
     width: auto;
     margin-left: 10px;
-    /* เว้นระยะห่างจากลูกศร */
 }
 
 /* --- Dark Mode สำหรับปุ่ม --- */
@@ -1164,7 +1016,6 @@ body.dark-mode #scrollToTopBtn:hover {
 @media screen and (max-width: 768px) {
     #scrollToTopBtn:hover {
         width: 50px;
-        /* ให้คงสภาพวงกลมเหมือนเดิม */
         background-color: #000;
     }
 
@@ -1186,12 +1037,10 @@ body.dark-mode #scrollToTopBtn:hover {
    ========================================= */
 .btn-toggle {
     position: relative;
-    /* เพื่อให้ Tooltip อ้างอิงตำแหน่งได้ */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    /* ระยะห่างระหว่างไอคอนกับข้อความ */
 }
 
 /* --- 1. Tooltip สำหรับคอมพิวเตอร์ --- */
@@ -1204,16 +1053,11 @@ body.dark-mode #scrollToTopBtn:hover {
     border-radius: 6px;
     padding: 5px 0;
     font-size: 0.9rem;
-
-    /* จัดตำแหน่งให้ลอยอยู่ด้านล่างปุ่ม */
     position: absolute;
     top: 150%;
     left: 50%;
     transform: translateX(-50%);
-    /* ดึงกลับมาให้กึ่งกลาง */
     z-index: 1;
-
-    /* เอฟเฟกต์ */
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -1223,7 +1067,6 @@ body.dark-mode #scrollToTopBtn:hover {
     content: "";
     position: absolute;
     bottom: 100%;
-    /* อยู่ด้านบนของกล่อง */
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
@@ -1240,7 +1083,6 @@ body.dark-mode #scrollToTopBtn:hover {
 /* --- 2. Mobile Label (ข้อความบนมือถือ) --- */
 .mobile-label {
     display: none;
-    /* บนคอมซ่อนไว้ */
     font-size: 1rem;
     font-weight: normal;
 }
@@ -1270,16 +1112,12 @@ body.dark-mode #scrollToTopBtn:hover {
    [แก้สีตัวหนังสือปุ่มเปลี่ยนโหมด]
    ========================================= */
 
-/* 1. โหมดปกติ (พื้นหลังสว่าง) -> ตัวหนังสือต้องสีดำ */
 .btn-toggle {
     color: #000000 !important;
-    /* บังคับดำ */
 }
 
-/* 2. โหมดมืด (พื้นหลังเข้ม) -> ตัวหนังสือต้องสีขาว */
 body.dark-mode .btn-toggle {
     color: #ffffff !important;
-    /* บังคับขาว */
 }
 
 /* =========================================
@@ -1310,7 +1148,7 @@ body.dark-mode .btn-toggle {
 .project-card p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #555;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -1341,19 +1179,16 @@ body.dark-mode .btn-toggle {
 .creators-list {
     display: flex;
     flex-direction: column;
-    /* เรียงลงมาเป็นแถว */
     gap: 20px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* การ์ดแถว */
 .creator-row {
     background-color: white;
     border-radius: 20px;
     padding: 20px 40px;
     display: flex;
-    /* จัดเรียงแนวนอน */
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -1365,24 +1200,28 @@ body.dark-mode .btn-toggle {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* รูปภาพ */
 .creator-pic img {
     width: 150px;
-    height: 150px;   
+    height: 150px;
     border-radius: 100px;
     border: 5px solid #f0f0f0;
 }
 
-/* รายละเอียดตรงกลาง */
 .creator-details {
     flex-grow: 1;
-    /* ขยายเต็มพื้นที่ว่าง */
     padding: 0 30px;
     text-align: left;
 }
-.creator-details p a{
+
+.creator-details p {
     color: #000;
     font-weight: bold;
+}
+
+.creator-details a {
+    color: #000000;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 .creator-details h2 {
@@ -1391,17 +1230,16 @@ body.dark-mode .btn-toggle {
 }
 
 .creator-details .student-id {
-    color: #777;
+    color: #000000;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-.creator-details .role {
+.creator-details .role p {
     font-size: 1.1rem;
-    color: #333;
+    color: #000000;
 }
 
-/* ปุ่มติดต่อ */
 .creator-contact {
     display: flex;
     gap: 10px;
@@ -1420,7 +1258,6 @@ body.dark-mode .btn-toggle {
     opacity: 0.8;
 }
 
-/* --- Dark Mode Support --- */
 body.dark-mode .project-card,
 body.dark-mode .creator-row {
     background-color: #3e3e36;
@@ -1430,7 +1267,7 @@ body.dark-mode .creator-row {
 body.dark-mode .project-card p,
 body.dark-mode .creator-details .student-id,
 body.dark-mode .creator-details .role {
-    color: #ccc;
+    color: #ffffff;
 }
 
 body.dark-mode .badge {
@@ -1450,7 +1287,6 @@ body.dark-mode .project-card hr {
 @media screen and (max-width: 768px) {
     .creator-row {
         flex-direction: column;
-        /* มือถือให้เรียงลงมา */
         text-align: center;
         padding: 30px;
     }
@@ -1470,37 +1306,28 @@ body.dark-mode .project-card hr {
    [ตกแต่งลิงก์ในหน้า No Result]
    ========================================= */
 
-/* จัดระยะห่างบรรทัดแนะนำเพิ่ม */
 #noResult .suggestion {
     margin-top: 15px;
     font-size: 1.2rem;
 }
 
-/* สไตล์ของลิงก์ (โหมดปกติ) */
 #noResult a {
     color: #000;
-    /* สีดำเข้ม */
     font-weight: bold;
-    /* ตัวหนา */
     text-decoration: underline;
-    /* ขีดเส้นใต้ */
     transition: color 0.3s;
 }
 
 #noResult a:hover {
     color: #555;
-    /* ชี้แล้วเป็นสีเทา */
 }
 
-/* สไตล์ของลิงก์ (Dark Mode) */
 body.dark-mode #noResult a {
     color: #fff;
-    /* สีขาวสว่าง อ่านง่ายบนพื้นดำ */
 }
 
 body.dark-mode #noResult a:hover {
     color: #ccc;
-    /* ชี้แล้วเป็นสีเทาอ่อน */
 }
 
 /* Dark Mode support for highlight */
@@ -1534,7 +1361,6 @@ body.dark-mode .highlight-text {
 
 .highlight-text {
     background-color: #e8f5e9;
-    /* สีเขียวอ่อน สื่อถึงความเร็ว/ผ่านฉลุย */
     padding: 15px;
     border-left: 5px solid #4caf50;
     margin: 20px 0;
@@ -1588,7 +1414,6 @@ body.dark-mode .highlight-text {
     color: #eee;
 }
 
-/* ตารางเปรียบเทียบ */
 .compare-table {
     width: 100%;
     border-collapse: collapse;
@@ -1613,7 +1438,6 @@ body.dark-mode .highlight-text {
     background-color: #f8f9fa;
 }
 
-/* Dark Mode Table */
 body.dark-mode .compare-table th,
 body.dark-mode .compare-table td:first-child {
     background-color: #444;
@@ -1627,7 +1451,6 @@ body.dark-mode .compare-table td {
 
 .highlight-text-pwsp {
     background-color: #ffebee;
-    /* สีแดงอ่อน สื่อถึงอันตราย/คำเตือน */
     padding: 15px;
     border-left: 5px solid #f44336;
     margin: 20px 0;
@@ -1652,12 +1475,10 @@ body.dark-mode .check-list-pwsp {
     border-color: #555;
 }
 
-/* แก้ไขอันเดิม: เพิ่ม z-index ให้เยอะๆ เป็น 9999 เพื่อให้ลอยทับเมนูทุกอย่าง */
 .contact-popup {
     display: none;
     position: fixed;
     z-index: 9999;
-    /* แก้ตรงนี้จาก 1000 เป็น 9999 */
     left: 0;
     top: 0;
     width: 100%;
@@ -1669,15 +1490,10 @@ body.dark-mode .check-list-pwsp {
     justify-content: center;
 }
 
-/* เพิ่มอันใหม่: เพื่อให้มือถือรู้ว่าเป็นปุ่มกดได้ */
 .social-btn {
     cursor: pointer;
-    /* เมาส์ชี้เป็นรูปมือ */
     user-select: none;
-    /* ห้ามคลุมดำตัวหนังสือ */
     -webkit-tap-highlight-color: transparent;
-    /* ลบสีเทาเวลาแตะบนมือถือ */
-    /* ตกแต่งปุ่มเพิ่มเติมได้ตามใจชอบ */
     background-color: #333;
     color: white;
     padding: 10px 20px;
@@ -1759,16 +1575,8 @@ body.dark-mode .check-list-pwsp {
     transform: translateY(-2px);
 }
 
-.fb-btn {
-    background-color: #1877F2;
-}
-
 .line-btn {
     background-color: #06C755;
-}
-
-.ig-btn {
-    background-color: #E1306C;
 }
 
 .ig-btn {
@@ -1779,32 +1587,23 @@ body.dark-mode .check-list-pwsp {
     background-color: #FF0000;
 }
 
-/* ปรับปุ่มใน creator ให้มนขึ้นตามที่ต้องการ */
 .creator-contact .social-btn {
     border-radius: 20px;
-    /* เพิ่มความมน */
     padding: 8px 15px;
-    /* ปรับ padding */
 }
 
 /* =========================================
    ส่วนแก้ไขเพิ่มเติม (วงกลม / ปุ่มมน / จัดขนาดมือถือ)
    ========================================= */
 
-/* 1. ทำให้รูปผู้จัดทำเป็นวงกลม (ทุกหน้าจอ) */
 .creator-pic img {
     border-radius: 50%;
-    /* เป็นวงกลม */
     object-fit: cover;
-    /* กันรูปเบี้ยว */
     border: 3px solid #ddd;
-    /* เพิ่มขอบให้สวยขึ้น */
 }
 
-/* 2. ทำให้ปุ่ม "ช่องทางการติดต่อ" มนขึ้น (ทุกหน้าจอ) */
 .social-btn {
     border-radius: 50px;
-    /* มนเหมือนแคปซูล */
     padding: 10px 25px;
 }
 
@@ -1812,43 +1611,31 @@ body.dark-mode .check-list-pwsp {
    MOBILE RESPONSIVE (แก้ขนาดตัวหนังสือในมือถือ)
    ========================================= */
 @media screen and (max-width: 768px) {
-
-    /* --- หน้าแรก (Index) --- */
-    /* แก้หัวข้อใหญ่ "What's in a COM" */
     .hero-content h1 {
         font-size: 2.5rem !important;
-        /* ลดจากเดิมที่อาจจะ 4-5rem */
         line-height: 1.2;
     }
 
-    /* แก้ปุ่ม "ดูรายการอุปกรณ์ทั้งหมด" */
     .hero-btn {
         font-size: 1rem !important;
         padding: 10px 20px !important;
         width: auto;
     }
 
-    /* --- หัวข้อต่างๆ (ใช้ร่วมกันทุกหน้า) --- */
-    /* แก้ "รายการชิ้นส่วน...", "ข่าวสาร...", "เกี่ยวกับโครงงาน", "ติดต่อเรา" */
     .content-title h3,
     .project-card h2,
     .contactus-info h3,
     .article-content h1 {
         font-size: 1.8rem !important;
-        /* บังคับให้เล็กลง */
         margin-bottom: 20px;
     }
 
-    /* --- หน้า Parts --- */
-    /* แก้ช่องค้นหาให้ไม่ล้น */
     .search-box {
         width: 100% !important;
         font-size: 1rem;
         padding: 10px;
     }
 
-    /* --- หน้า Creator --- */
-    /* จัดเลย์เอาต์คนให้เรียงลงมาแนวตั้ง */
     .creator-row {
         flex-direction: column;
         text-align: center;
@@ -1856,26 +1643,17 @@ body.dark-mode .check-list-pwsp {
         gap: 15px;
     }
 
-    /* ปรับขนาดรูปโปรไฟล์ในมือถือ */
     .creator-pic img {
         width: 140px;
         height: 140px;
     }
 
-    /* ปรับขนาดชื่อและรหัสนักศึกษา */
     .creator-details h2 {
         font-size: 1.3rem;
     }
 
     .creator-details p {
         font-size: 0.9rem;
-    }
-
-    /* --- Footer (ติดต่อเรา) --- */
-    .contactus-info p {
-        font-size: 0.9rem;
-        padding: 0 10px;
-        /* กันข้อความชิดขอบจอเกินไป */
     }
 }
 
@@ -1884,12 +1662,10 @@ body.dark-mode .check-list-pwsp {
    ========================================= */
 body.dark-mode .news-meta {
     color: #e0e0e0 !important;
-    /* เปลี่ยนเป็นสีขาวควันบุหรี่ ให้ตัดกับพื้นหลัง */
 }
 
 body.dark-mode .news-meta span {
     color: #e0e0e0 !important;
-    /* บังคับสีข้อความข้างในด้วย */
 }
 
 .google-btn {
@@ -1910,7 +1686,6 @@ body.dark-mode .news-meta span {
     background-position: right center;
     transform: translateY(-3px);
     box-shadow: 0 0 20px rgba(252, 31, 11, 1);
-    /* เงาเรืองแสงสีแดง */
 }
 
 /* =========================================
@@ -1920,20 +1695,16 @@ body.dark-mode .news-meta span {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    /* ตำแหน่งซ้ายล่าง */
     background-image: linear-gradient(45deg, #4285F4, #34A853);
-    /* สีไล่ระดับของ Google */
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 50px;
-    /* ทำให้ปุ่มมน */
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 990;
-    /* ให้อยู่บนสุด แต่ต่ำกว่า Popup */
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -1945,7 +1716,6 @@ body.dark-mode .news-meta span {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ปุ่มใน Popup แบบสอบถาม */
 .survey-actions {
     display: flex;
     justify-content: center;
@@ -1984,7 +1754,6 @@ body.dark-mode .news-meta span {
     transform: translateY(-2px);
 }
 
-/* Dark Mode สำหรับปุ่มปฏิเสธ */
 body.dark-mode .survey-btn-secondary {
     background-color: #ff4d4d;
     color: #ffffff;
@@ -1993,8 +1762,112 @@ body.dark-mode .survey-btn-secondary {
 body.dark-mode .survey-btn-secondary:hover {
     background-color: rgb(241, 55, 55);
     transform: translateY(-2px);
-} 
+}
+
 .creator-details .role {
     color: #333;
     font-size: 1.1rem;
+}
+
+/* =========================================
+   FOOTER STYLES (ส่วนท้ายเว็บ)
+   ========================================= */
+.site-footer-minimal {
+    background-color: #e8e8d8;
+    padding: 40px 20px 20px 20px;
+    margin-top: auto;
+    text-align: center;
+    color: #333;
+}
+
+.site-footer-minimal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.site-footer-minimal p {
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.footer-links-inline {
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.footer-links-inline a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links-inline a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer-bottom-minimal {
+    border-top: 1px solid #000000;
+    /* เส้นคั่นบางๆ */
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* =========================================
+   Dark Mode สำหรับ Footer 
+   ========================================= */
+body.dark-mode .site-footer-minimal {
+    background-color: #1a1a1a;
+    color: #ddd;
+}
+
+body.dark-mode .site-footer-minimal h2 {
+    color: #fff;
+}
+
+body.dark-mode .site-footer-minimal p {
+    color: #d2d2d2;
+}
+
+body.dark-mode .footer-links-inline {
+    color: #555;
+}
+
+body.dark-mode .footer-links-inline a {
+    color: #ddd;
+}
+
+body.dark-mode .footer-links-inline a:hover {
+    color: #fff;
+}
+
+body.dark-mode .footer-bottom-minimal {
+    border-top: 1px solid #c3c3c3;
+    color: #888;
+}
+
+/* =========================================
+   โหมดมือถือ (Mobile Responsive)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .site-footer-minimal {
+        padding: 30px 15px 15px 15px;
+    }
+
+    .site-footer-minimal h2 {
+        font-size: 1.5rem;
+    }
+
+    .site-footer-minimal p {
+        font-size: 0.95rem;
+    }
+
+    .footer-links-inline {
+        line-height: 2;
+    }
 }
